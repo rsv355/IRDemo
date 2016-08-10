@@ -14,7 +14,7 @@ public class IRSocketClient {
     /**
      * Maximum size of buffer
      */
-    public static final int BUFFER_SIZE = 2048;
+    private int BUFFER_SIZE = 2048;
     private Socket socket = null;
     private PrintWriter out = null;
     private BufferedReader in = null;
@@ -26,6 +26,10 @@ public class IRSocketClient {
         this.host = host;
         this.port = port;
 
+    }
+
+    public void setBufferSize(int bfSize){
+        this.BUFFER_SIZE = bfSize;
     }
 
     private void connectWithServer() {

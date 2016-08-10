@@ -83,9 +83,9 @@ public class MainActivity extends Activity {
 //                 out.write(str);
 //                out.flush();
 
-                IRSocketClient nc = new IRSocketClient(dstAddress, dstPort);
-                nc.sendDataWithString(str);
-                String r = nc.receiveDataFromServer();
+                IRSocketClient socketClient = new IRSocketClient(dstAddress, dstPort);
+                socketClient.sendDataWithString(str);
+                String r = socketClient.receiveDataFromServer();
                 Log.e("Socket status",""+r);
 
 
