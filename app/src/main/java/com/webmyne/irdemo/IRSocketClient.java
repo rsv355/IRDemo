@@ -19,7 +19,7 @@ public class IRSocketClient {
     private PrintWriter out = null;
     private BufferedReader in = null;
     private String host = null;
-    private int port = 4998;
+    private int port = 0;
 
 
     public IRSocketClient(String host, int port) {
